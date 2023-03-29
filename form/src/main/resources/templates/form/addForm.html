@@ -38,8 +38,8 @@
         <div>판매 여부</div>
         <div>
             <div class="form-check">
+<!--                쳌박스하면 랜더링으로 히든 타입으로 하나가 더 생김-->
                 <input type="checkbox" id="open" th:field="*{open}" class="form-check-input">
-                <label for="open" class="form-check-label">판매 오픈</label>
             </div>
         </div>
 
@@ -48,6 +48,7 @@
             <div>등록 지역</div>
             <div th:each="region : ${regions}" class="form-check form-check-inline">
                 <input type="checkbox" th:field="*{regions}" th:value="${region.key}" class="form-check-input">
+<!--                for - 아이디에 매칭-->
                 <label th:for="${#ids.prev('regions')}"
                        th:text="${region.value}" class="form-check-label">서울</label>
             </div>

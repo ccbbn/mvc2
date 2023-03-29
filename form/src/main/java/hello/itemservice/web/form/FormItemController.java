@@ -24,7 +24,7 @@ public class FormItemController {
 
     private final ItemRepository itemRepository;
 
-    @ModelAttribute("regions")
+    @ModelAttribute("regions") // 키 :"regions", 값: regions
     public Map<String, String> regions() {
         Map<String, String> regions = new LinkedHashMap<>();
         regions.put("SEOUL", "서울");
