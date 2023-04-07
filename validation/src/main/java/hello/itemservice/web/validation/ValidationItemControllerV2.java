@@ -53,7 +53,7 @@ public class ValidationItemControllerV2 {
 
 //    @PostMapping("/add")
     public String addItemV1(@ModelAttribute Item item, BindingResult bindingResult, RedirectAttributes redirectAttributes, Model model) {
-
+        //BindingResult  <- 에러를 담는 객체, @ModelAttribute에서 처리를 못해서 떠넘겨 버림
         //검증 로직
         if (!StringUtils.hasText(item.getItemName())) {
             bindingResult.addError(new FieldError("item", "itemName", "상품 이름은 필수 입니다."));

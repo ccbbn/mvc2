@@ -97,6 +97,8 @@ public class ValidationItemControllerV4 {
             return "validation/v4/editForm";
         }
 
+
+        //필요함
         Item itemParam = new Item();
         itemParam.setItemName(form.getItemName());
         itemParam.setPrice(form.getPrice());
